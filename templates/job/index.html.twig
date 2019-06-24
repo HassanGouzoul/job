@@ -1,13 +1,31 @@
-<!doctype html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-<h1>Bienvenu sur la page d'accueil</h1>
-</body>
-</html>
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Bienvenu sur la page d'accueil</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A blanditiis deserunt ducimus, iure laboriosam
+                omnis rem repudiandae suscipit temporibus voluptates! Assumenda consequatur corporis eveniet fugit
+                impedit labore magnam sunt tempore. Autem cumque dicta dignissimos dolores, ea esse harum minima, quia
+                recusandae repellat reprehenderit temporibus unde voluptatibus. Aliquam blanditiis, consequatur dolores
+                et eum itaque, iusto molestias obcaecati officia pariatur perspiciatis placeat repellendus similique
+                temporibus totam! Amet eius labore omnis. A dicta dignissimos ducimus fugit illum labore libero, magni
+                necessitatibus odit optio possimus ratione, reprehenderit sed similique, tempora. A amet, aperiam
+                aspernatur autem deleniti deserunt dicta dolor dolores ducimus ea eaque ex excepturi explicabo fugiat
+                itaque magnam magni maiores maxime modi molestiae nesciunt nisi nostrum qui quia, quibusdam quis
+                tempora, ut vel veritatis voluptatum. Accusamus aperiam beatae blanditiis deserunt dicta, dignissimos
+                eius et eum id illum inventore iste, magni, mollitia odio perspiciatis porro quam sunt. Delectus
+                doloribus illum quia? A, iusto optio!</p>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">En savoir plus >></a></p>
+        </div>
+    </div>
+    <h2>{{ job.title }}</h2>
+    <p>{{ job.description }}</p>
+    <p>{{ job.adresse }}</p>
+    {{ parent() }}
+
+    {#<h3>{{ offre.titre }}</h3>
+    <p>{{ offre.techno }}</p>#}
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}
